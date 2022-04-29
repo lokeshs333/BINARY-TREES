@@ -1,4 +1,4 @@
-// recursion on preOrder
+// recursion on preorder...
 #include <bits/stdc++.h>
 
 struct node
@@ -32,7 +32,7 @@ int main()
 {
 
     // Constructing the root node - Using Function (Recommended)
-    struct node *p = createNode(4);
+    struct node *pm = createNode(4);
     struct node *p1 = createNode(1);
     struct node *p2 = createNode(6);
     struct node *p3 = createNode(5);
@@ -45,8 +45,8 @@ int main()
     //  5   2
 
     // Linking the root node with left and right children
-    p->left = p1;
-    p->right = p2;
+    pm->left = p1;
+    pm->right = p2;
     p1->left = p3;
     p1->right = p4;
 
