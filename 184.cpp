@@ -1,4 +1,4 @@
-// inorder of a tree
+// postorder of a tree using recursion
 #include <iostream>
 using namespace std;
 struct node
