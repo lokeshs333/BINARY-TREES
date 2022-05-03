@@ -1,55 +1,49 @@
-// recursion on preorder...
-#include <bits/stdc++.h>
-
+// preorder of a tree
+#include <iostream>
+using namespace std;
 struct node
 {
     int data;
-    struct node *left;
-    struct node *right;
+    node *left;
+    node *right;
 };
-
-struct node *createNode(int data)
+node *createnode(int data)
 {
-    struct node *n;                                 // creating a node pointer
-    n = (struct node *)malloc(sizeof(struct node)); // Allocating memory in the heap
-    n->data = data;                                 // Setting the data
-    n->left = NULL;                                 // Setting the left and right children to NULL
-    n->right = NULL;                                // Setting the left and right children to NULL
-    return n;                                       // Finally returning the created node
+    node *n = new node;
+    n->data = data;
+    n->right = NULL;
+    n->left = NULL;
+    return n;
 }
-
-void preOrder(struct node *root)
+void preorder(node *root)
 {
-    if (root != NULL)
+    if (root == nullptr)
     {
-        printf("%d ", root->data);
-        preOrder(root->left);
-        preOrder(root->right);
+        return;
     }
+    cout << root->data << " ";
+    preorder(root->left);
+    preorder(root->right);
 }
 
 int main()
 {
+    node *root = createnode(1);
+    node *a = createnode(2);
+    node *b = createnode(3);
+    node *c = createnode(4);
+    node *d = createnode(5);
+    node *e = createnode(6);
+    node *f = createnode(7);
+    node *g = createnode(8);
 
-    // Constructing the root node - Using Function (Recommended)
-    struct node *pm = createNode(4);
-    struct node *p1 = createNode(1);
-    struct node *p2 = createNode(6);
-    struct node *p3 = createNode(5);
-    struct node *p4 = createNode(2);
-    // Finally The tree looks like this:
-    //      4
-    //     / \
-    //    1   6
-    //   / \
-    //  5   2
-
-    // Linking the root node with left and right children
-    pm->left = p1;
-    pm->right = p2;
-    p1->left = p3;
-    p1->right = p4;
-
-    preOrder(p);
+    root->left = a;
+    a->left = c;
+    root->right = b;
+    b->left = d;
+    b->right = e;
+    d->left = f;
+    d->right = g;
+    preorder(root);
     return 0;
 }
