@@ -1,5 +1,6 @@
 // postorder of a tree using recursion
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 struct node
 {
@@ -25,6 +26,36 @@ void postorder(node *root)
     postorder(root->right);
     cout << root->data << " ";
 }
+void postorder_Iterative(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    stack<node *> st;
+    st.push(root);
+    stack<int> lok;
+    while (!st.empty())
+    {
+        node *cur = st.top();
+        st.pop();
+        lok.push(cur->data);
+
+        if (cur->left)
+        {
+            st.push(cur->left);
+        }
+        if (cur->right)
+        {
+            st.push(cur->right);
+        }
+    }
+    while (!lok.empty())
+    {
+        cout << lok.top() << " ";
+        lok.pop();
+    }
+}
 
 int main()
 {
@@ -45,5 +76,8 @@ int main()
     d->left = f;
     d->right = g;
     postorder(root);
+     cout << endl;
+    cout << "postorder using iteration method is" << endl;
+    postorder_Iterative(root);
     return 0;
 }
