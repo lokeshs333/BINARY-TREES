@@ -25,6 +25,29 @@ void preorder(node *root)
     preorder(root->left);
     preorder(root->right);
 }
+void preorder_iterative(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    stack<node *> st;
+    st.push(root);
+    while (!st.empty())
+    {
+        node *cur = st.top();
+        st.pop();
+        cout << cur->data << " ";
+        if (cur->right)
+        {
+            st.push(cur->right);
+        }
+        if (cur->left)
+        {
+            st.push(cur->left);
+        }
+    }
+}
 
 int main()
 {
@@ -45,5 +68,7 @@ int main()
     d->left = f;
     d->right = g;
     preorder(root);
+      cout << "preorder using itterative approach is " << endl;
+    preorder_iterative(root);
     return 0;
 }
