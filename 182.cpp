@@ -25,6 +25,26 @@ void inorder(node *root)
     cout << root->data << " ";
     inorder(root->right);
 }
+void inorder_iterative(node *root)
+{
+    node *cur = root;
+    stack<node *> st;
+    while (cur != NULL || !st.empty())
+    {
+        if (cur != NULL)
+        {
+            st.push(cur);
+            cur = cur->left;
+        }
+        else
+        {
+            cur = st.top();
+            st.pop();
+            cout << cur->data << " ";
+            cur = cur->right;
+        }
+    }
+}
 
 int main()
 {
@@ -45,5 +65,7 @@ int main()
     d->left = f;
     d->right = g;
     inorder(root);
+        cout << "hello lokesh pandey" << endl;
+    inorder_iterative(root);
     return 0;
 }
