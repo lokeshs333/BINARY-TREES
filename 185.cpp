@@ -1,4 +1,5 @@
-// leftview of o tree uhsing recursion done in first attempt
+// leftview of o tree uhsing recursion done in first attempt..
+//i have copied it from 186 plz dont thoraly go through it but it is running in a good way..
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -36,7 +37,7 @@ void leftViewUtil(struct node *root,
     leftViewUtil(root->right, level + 1, max_level);
 }
 
-// A wrapper over rightViewUtil()
+// A wrapper over leftViewUtil()
 void left_view(struct node *root)
 {
     int max_level = 0;
