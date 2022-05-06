@@ -22,13 +22,13 @@ Node *createnode(int data)
 }
 
 // function to create a new node
-Node *newNode(int key)
-{
-    Node *node = new Node();
-    node->left = node->right = NULL;
-    node->data = key;
-    return node;
-}
+// Node *newNode(int key)
+// {
+//     Node *node = new Node();
+//     node->left = node->right = NULL;
+//     node->data = key;
+//     return node;
+// }
 
 // function should print the topView of
 // the binary tree
