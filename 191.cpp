@@ -1,4 +1,4 @@
-// leftview of binary tree of a tree
+// diagonalview of binary tree of a tree
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
