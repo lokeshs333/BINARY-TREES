@@ -1,4 +1,5 @@
 // preorder of a tree
+// revised
 #include <iostream>
 using namespace std;
 struct node
