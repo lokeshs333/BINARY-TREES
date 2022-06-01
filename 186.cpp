@@ -30,7 +30,7 @@ void rightViewUtil(struct node *root,
         *max_level = level;
     }
 
-    // Recur for right subtree first,
+    // Recur for right subtree first,.......
     // then left subtree
     rightViewUtil(root->right, level + 1, max_level);
     rightViewUtil(root->left, level + 1, max_level);
