@@ -84,10 +84,10 @@ Node *treeFromString(string str, int si, int ei)
     if (index != -1)
     {
 
-        // call for left subtree
+        // call for left subtree......
         root->left = treeFromString(str, si + 2, index - 1);
 
-        // call for right subtree
+        // call for right subtree.....
         root->right = treeFromString(str, index + 2, ei - 1);
     }
     return root;
