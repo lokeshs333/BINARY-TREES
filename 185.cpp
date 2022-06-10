@@ -1,4 +1,4 @@
-// leftview of o tree uhsing recursion done in first attempt..
+// leftview of o tree uhsing recursion done in first attempt....
 //i have copied it from 186 plz dont thoraly go through it but it is running in a good way..
 #include <iostream>
 #include <bits/stdc++.h>
