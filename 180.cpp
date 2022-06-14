@@ -1,4 +1,4 @@
-// diameter is using recursion
+// diameter is using recursion..
 #include <bits/stdc++.h>
 using namespace std;
 struct node
