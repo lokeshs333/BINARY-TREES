@@ -1,4 +1,4 @@
-// convert binary tree into sum tree
+// convert binary tree into sum tree..
 
 #include <iostream>
 #include <bits/stdc++.h>
