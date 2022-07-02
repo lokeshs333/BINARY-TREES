@@ -1,4 +1,5 @@
 // check if a binary tree has same level of trees or not..
+//https://practice.geeksforgeeks.org/problems/leaf-at-same-level/1
 
 #include <iostream>
 #include <bits/stdc++.h>
