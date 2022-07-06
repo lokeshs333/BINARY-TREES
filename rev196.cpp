@@ -1,5 +1,5 @@
 /* C++ program to construct tree using
-inorder and preorder traversals */
+inorder and preorder traversalsm..... */
 #include <bits/stdc++.h>
 using namespace std;
 
